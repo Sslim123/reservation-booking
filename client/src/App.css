@@ -1,0 +1,271 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Fluid font sizing for all devices */
+  font-size: clamp(14px, 1.2vw, 17px); /* Refined slightly for tighter typography hierarchy */
+  line-height: 1.6;
+  background-color: #fcfcfc;
+  color: #212529;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile viewports */
+}
+
+/* 
+  Refactored .App structure to be a fluid container.
+  This allows headers/footers to hit page boundaries while content remains perfectly safe.
+*/
+.App {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global RTL support using modern logical properties */
+[dir="rtl"] {
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Optimal fallback rendering for Arabic script alignment */
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+/* Custom visual polish utilities shared globally across pages */
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+/* Smooth micro-interactions for an elegant, high-end feel */
+.card-hover-effect {
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out !important;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Smooth transition when swapping between English and Arabic layouts */
+main, section, div, p, h1, h2, h3, h4 {
+  transition: text-align 0.2s ease-in-out;
+}
+.footer-link {
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.footer-link:hover {
+    color: #ffc107;
+}
+
+.footer-link svg:hover {
+    transform: translateY(-2px);
+}
+.hero-section{
+
+    position:relative;
+
+    min-height:90vh;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to right,
+
+        rgba(0,0,0,.75),
+
+        rgba(0,0,0,.45),
+
+        rgba(0,0,0,.20)
+
+    );
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    color:#FFC107;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.hero-title{
+
+    color:white;
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-top:20px;
+
+}
+
+.hero-description{
+
+    color:#f8f9fa;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    max-width:560px;
+
+    margin-top:25px;
+
+}
+
+.hero-section .btn{
+
+    border-radius:8px;
+
+    padding:.9rem 2rem;
+
+}
+
+.hero-section .btn-outline-light:hover{
+
+    color:#212529;
+
+    background:white;
+
+}
+
+@media(max-width:992px){
+
+.hero-section{
+
+    min-height:75vh;
+
+    text-align:center;
+
+}
+
+.hero-title{
+
+    font-size:2.7rem;
+
+}
+
+.hero-description{
+
+    margin:auto;
+
+    margin-top:20px;
+
+}
+
+}
+.about-hero{
+
+    position:relative;
+
+    min-height:45vh;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #212529,
+
+        #343a40
+
+    );
+
+}
+
+.about-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.30);
+
+}
+
+.about-badge{
+
+    color:#FFC107;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.about-title{
+
+    font-size:3.3rem;
+
+    font-weight:800;
+
+    margin-top:20px;
+
+}
+
+.about-subtitle{
+
+    max-width:760px;
+
+    margin:25px auto 0;
+
+    line-height:1.9;
+
+    color:#dee2e6;
+
+    font-size:1.15rem;
+
+}
+
+@media(max-width:768px){
+
+.about-title{
+
+    font-size:2.3rem;
+
+}
+
+.about-subtitle{
+
+    font-size:1rem;
+
+}
+
+}
+.value-card{
+
+    border-top:4px solid #FFC107;
+
+}
