@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Heading({ isEnglish, setIsEnglish, toggleLanguage }) {
   const [showNavBar, setShowNavBar] = useState(false);
@@ -42,24 +42,24 @@ function Heading({ isEnglish, setIsEnglish, toggleLanguage }) {
         <div className={`collapse navbar-collapse ${showNavBar ? 'show' : ''}`}>
           <ul className={`navbar-nav ${isEnglish ? 'ms-auto' : 'me-auto'} mb-2 mb-lg-0 align-items-center gap-2 mt-3 mt-lg-0`}>
             <li className="nav-item">
-              <a className="nav-link fw-semibold px-3 text-uppercase text-white-50" href="/">
+              <Link className="nav-link fw-semibold px-3 text-uppercase text-white-50" to="/">
                 {isEnglish ? "Home" : "الرئيسية"}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-semibold px-3 text-uppercase text-white-50" href="/booking">
+              <Link className="nav-link fw-semibold px-3 text-uppercase text-white-50" to="/booking">
                 {isEnglish ? "Booking" : "الحجوزات"}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-semibold px-3 text-uppercase text-white-50" href="/offers">
+              <Link className="nav-link fw-semibold px-3 text-uppercase text-white-50" to="/offers">
                 {isEnglish ? "Offers" : "العروض"}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-semibold px-3 text-uppercase text-white-50" href="/about">
+              <Link className="nav-link fw-semibold px-3 text-uppercase text-white-50" to="/about">
                 {isEnglish ? "About" : "معلومات عنّا"}
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
