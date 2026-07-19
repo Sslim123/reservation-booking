@@ -1,8 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
 import React from "react";
-import Img1 from "../images/hotel-glasgow.jpg";
-import Img2 from "../images/glasgow.jpeg";
-import Img3 from "../images/hotel-london.jpg";
+import Img1 from "../images/images6.jpg";
+import Img2 from "../images/imagesroom.jpg";
+import Img3 from "../images/images7.jpg";
 
 
 
